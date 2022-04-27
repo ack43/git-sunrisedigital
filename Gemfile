@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+ruby '2.7.0'
+# gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'rails', '~> 7.0.0'
 gem 'pg'
 
 # assets
@@ -27,7 +28,8 @@ gem 'ed25519', '>= 1.2', '< 2.0'
 # other
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 4.1'
+# gem 'puma', '~> 4.1'
+gem 'puma', '~> 5'
 gem 'turbolinks', '~> 5'
 
 group :development do
@@ -41,3 +43,9 @@ group :development, :test do
   gem 'bundler-audit', require: false
   gem 'dotenv-rails'
 end
+
+
+# upds
+gem 'mimemagic', '~> 0.4.3'
+# gem "letter_opener", group: :development
+gem 'letter_opener_web', '~> 2.0', group: :development

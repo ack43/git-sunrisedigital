@@ -2,7 +2,7 @@
 
 1. Don't forget to run "bin/bundle-audit" to check for vulnerable! Update gems if required
 2. Checkout to another branch, make pull request and merge it (don't push to master directly!)
-3. Check the .env.example and onfig/deploy/production.rb.example. Update it according to the production server:
+3. Check the .env.example and config/deploy/production.rb.example. Update it according to the production server:
    `mv .env.example .env`
    `mv config/deploy/production.rb.example config/deploy/production.rb`
 4. Add your ssh-keys to the server (https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2)

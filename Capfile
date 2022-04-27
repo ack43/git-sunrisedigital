@@ -5,6 +5,11 @@ require "capistrano/setup"
 require "capistrano/deploy"
 require "capistrano/bundler"
 require "capistrano/rails/assets"
+
+
+# load File.expand_path('../lib/capistrano/tasks/linked_files.rake', __FILE__)
+
+
 require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 
@@ -15,4 +20,4 @@ require "capistrano/passenger"
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 
 set :rbenv_type, :user
-set :rbenv_ruby, '2.6.3'
+set :rbenv_ruby, '2.7.0'

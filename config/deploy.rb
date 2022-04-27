@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "~> 3.17.0"
 
 set :application, "sunrise"
 set :repo_url, "https://github.com/sunrisedigitalru/git-sunrisedigital.git"
@@ -17,8 +17,11 @@ set :deploy_to, "/home/deployer/#{fetch :application}"
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
+
+
 # Default value for :pty is false
 # set :pty, true
+
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 
