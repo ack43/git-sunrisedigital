@@ -21,7 +21,7 @@ set :deploy_to, "/home/deployer/#{fetch :application}"
 
 # Default value for :pty is false
 # set :pty, true
-
+append :linked_files, 'config/credentials/production.key'
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 

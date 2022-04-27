@@ -6,7 +6,7 @@ require "capistrano/deploy"
 require "capistrano/bundler"
 require "capistrano/rails/assets"
 
-
+require 'capistrano/upload'
 # load File.expand_path('../lib/capistrano/tasks/linked_files.rake', __FILE__)
 
 
