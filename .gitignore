@@ -29,3 +29,9 @@
 /config/master.key
 config/deploy/production.rb
 .env
+
+
+/.ruby-gemset
+/config/deploy/vagrant.rb
+/config/credentials/production.key
+/config/credentials/development.key

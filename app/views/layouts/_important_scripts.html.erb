@@ -1,3 +1,4 @@
+<% if Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:FacebookJSSDK] %>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -19,3 +20,4 @@
   attribution=setup_tool
   page_id="1444019499203284">
 </div>
+<% end %>
