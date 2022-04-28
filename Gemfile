@@ -50,3 +50,5 @@ end
 gem 'mimemagic', '~> 0.4.3'
 # gem "letter_opener", group: :development
 gem 'letter_opener_web', '~> 2.0', group: :development
+
+gem 'strscan', '1.0.3'

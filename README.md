@@ -6,7 +6,7 @@
    `mv .env.example .env`
    `mv config/deploy/production.rb.example config/deploy/production.rb`
 4. Add your ssh-keys to the server (https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-2)
-5. Push .env variables to the remove server
+5. Push .env variables to the remote server
    `nano /home/deploy/myapp/.rbenv-vars` or `vi /home/deploy/myapp/.rbenv-vars`
 6. Type `cap production deploy` to deploy the app on a remote server. It will:
    1. Fetch the code from the github-repo mentioned in `config/deploy/production.rb`
