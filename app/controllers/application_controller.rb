@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def validator(object)
     object.valid?
     model = object.class.name.underscore.to_sym
-    field = params["request"].values.first
+    field = params["request"].keys.first
     @errors = object.errors[field]
 
     if @errors.empty?
