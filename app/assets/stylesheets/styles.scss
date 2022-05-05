@@ -1534,20 +1534,24 @@ body.modal-open {
 	.no-webp .header {
 		background: image-url('header-xxl.jpg');
 		background-size: cover;
+		background-position: center center;
 	}
 
 	.webp .header {
 		background: image-url('header-xxl.webp');
 		background-size: cover;
+		background-position: center center;
 	}
 }
 @media (max-width: 991px) {
 	.no-webp .promo_block {
 		background: image-url('header.jpg');
+		background-position: left center;
 	}
 
 	.webp .promo_block {
 		background: image-url('header.webp');
+		background-position: left center;
 	}
 
 	.key_features {
