@@ -9,7 +9,9 @@ class ApplicationController < ActionController::Base
     @errors = object.errors[field]
 
     if @errors.empty?
-      @errors = true
+      # Misunderstanding of variable types.
+      # So use just one + `def error_json`:
+      # @errors = false
     else
       name = t("activerecord.attributes.request.#{field}")
       @errors.map! { |e| "#{name} #{e}<br />" }

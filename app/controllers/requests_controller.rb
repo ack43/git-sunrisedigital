@@ -2,7 +2,7 @@ class RequestsController < ApplicationController
   def submit_form
     @request = Request.new(request_params)
     validator(@request)
-    if @errors == true || @errors.empty?
+    if @errors == false || @errors.empty?
       begin
         RequestNotifier.received(@request.message).deliver
       rescue Exception => ex
@@ -32,11 +32,16 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
     validator(@request)
     respond_to do |format|
-      format.json { render json: @errors }
+      format.json { render json: errors_json }
     end
   end
 
   def request_params
     params.require(:request).permit(:name, :phone, :email, :type)
   end
+
+  def errors_json 
+    @errors.blank? ? true : @errors
+  end
+  
 end
