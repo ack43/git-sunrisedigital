@@ -1,0 +1,7 @@
+ENV['MAIL_FROM']      ||= Rails.application.credentials[:MAIL_FROM]
+ENV['MAIL_USERNAME']  ||= Rails.application.credentials[:MAIL_USERNAME]
+ENV['MAIL_PASS']      ||= Rails.application.credentials[:MAIL_PASS]
+ENV['PHONE']          ||= Rails.application.credentials[:PHONE]
+ENV['EMAIL']          ||= Rails.application.credentials[:EMAIL]
+ENV['HOST']           ||= Rails.application.credentials[:HOST]
+ENV['SECRET_TOKEN']   ||= Rails.application.credentials[:SECRET_TOKEN]

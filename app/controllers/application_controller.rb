@@ -5,11 +5,13 @@ class ApplicationController < ActionController::Base
   def validator(object)
     object.valid?
     model = object.class.name.underscore.to_sym
-    field = params["request"].values.first
+    field = params["request"].keys.first
     @errors = object.errors[field]
 
     if @errors.empty?
-      @errors = true
+      # Misunderstanding of variable types.
+      # So use just one + `def error_json`:
+      # @errors = false
     else
       name = t("activerecord.attributes.request.#{field}")
       @errors.map! { |e| "#{name} #{e}<br />" }

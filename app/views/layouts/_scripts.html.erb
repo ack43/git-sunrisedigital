@@ -1,3 +1,4 @@
+<% if Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:GoogleTagManager] %>
 <!-- Google Tag Manager -->
 <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -5,7 +6,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P3RPFF4');</script>
 <!-- End Google Tag Manager -->
+<% end %>
 
+
+<% if true || Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:YandexMetrika] %>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" defer>
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -24,7 +28,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	</div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+<% end %>
 
+
+<% if Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:FacebookPixel] %>
 <script defer>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
@@ -41,7 +48,10 @@ window._fbq = window._fbq || [];
 window._fbq.push(['track', 'PixelInitialized', {}]);
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=241156176092714&amp;ev=PixelInitialized" /></noscript>
+<% end %>
 
+
+<% if Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:FacebookConversionCode] %>
 <!-- Facebook Conversion Code for Кнопка1 -->
 <script defer>(function() {
 var _fbq = window._fbq || (window._fbq = []);
@@ -58,5 +68,9 @@ window._fbq = window._fbq || [];
 window._fbq.push(['track', '6017275761050', {'value':'0.01','currency':'RUB'}]);
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6017275761050&amp;cd[value]=0.01&amp;cd[currency]=RUB&amp;noscript=1" /></noscript>
+<% end %>
 
+
+<% if Rails.application.credentials[:scripts] && Rails.application.credentials[:scripts][:cookieinfo] %>
 <script defer id="cookieinfo" src="https://cookieinfoscript.com/js/cookieinfo.min.js", type="text/javascript", data-message="Мы используем куки, чтобы улучшить ваше взаимодействие с сайтом. Продолжая использовать этот сайт, вы соглашаетесь с использованием куки", data-linkmsg="Что это?", data-close-text="Хорошо", data-link="#1c6794"></script>
+<% end %>

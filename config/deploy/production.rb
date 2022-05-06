@@ -1,6 +1,7 @@
 
 server '167.179.66.68', user: 'deployer', roles: %w{app web}
 
+append :linked_files,  "config/credentials/production.key"
 
 # server-based syntax
 # ======================
